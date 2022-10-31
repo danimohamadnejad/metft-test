@@ -3,7 +3,9 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+/vendor/
+/packages/feedReader/vendor/
+/packages/auth/vendor/
 .env
 .env.backup
 .env.production

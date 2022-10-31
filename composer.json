@@ -11,7 +11,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "metft/feedreader": "dev-CU-32bky7a_Feed-reader-package_danial-m"
+        "metft/auth": "dev-CU-32pyh8f_Auth_danial-m"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -65,6 +65,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
-        {"type":"path","url":"./packages/feedReader", "options":{"symlink":true}}
+        {"type":"path","url":"./packages/feedReader", "options":{"symlink":true}},
+        {"type":"path","url":"./packages/auth", "options":{"symlink":true}}
     ]
 }

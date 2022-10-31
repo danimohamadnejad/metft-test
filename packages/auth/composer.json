@@ -1,0 +1,38 @@
+{
+    "name": "metft/auth",
+    "description": "registration and authentication",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danial mohamadnejad",
+            "email": "danimohamadnejad@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Metft\\Auth\\": "src/",
+            "Metft\\Auth\\Tests\\": "tests/"
+        },
+        "files":[
+        ]
+    },
+    "autoload-dev": {
+        "psr-4":{
+            "Metft\\Auth\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Metft\\Auth\\Providers\\AuthServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "8.0.x-dev"
+    }
+}
