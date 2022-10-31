@@ -4,11 +4,13 @@ use Metft\Auth\Http\Controllers\ApiController;
 use Metft\Auth\Http\Requests\RegisterationRequest;
 use App\Models\User;
 use App\Http\Resources\UserResource;
+use Illuminate\Http\Request;
 
 class AuthController extends ApiController{
  
- public function authenticate(){
-  
+ public function authenticate(Request $req, User $umodel){
+  $user = $umodel->first();
+  return $user;
  }
 
  public function register(RegisterationRequest $req, User $umodel){
