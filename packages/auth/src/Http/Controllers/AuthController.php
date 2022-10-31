@@ -23,6 +23,7 @@ class AuthController extends ApiController{
       'usage_guide'=>"Send token as authorization header -->> Authorization: Bearer {token}"
     ], "User authenticated");
   }
+  return $this->errorResponse([], 500, "Could not authenticate. Server error occurred.");
  }
 
  public function register(RegisterationRequest $req, User $umodel){
