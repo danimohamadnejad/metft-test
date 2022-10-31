@@ -5,12 +5,14 @@ use Metft\Auth\Http\Requests\RegisterationRequest;
 use App\Models\User;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AuthController extends ApiController{
  
  public function authenticate(Request $req, User $umodel){
   $user = $umodel->first();
-  return $user;
+  $token = $user->createToken(Str::random());
+  return $token->plainTextToken;
  }
 
  public function register(RegisterationRequest $req, User $umodel){
@@ -22,5 +24,5 @@ class AuthController extends ApiController{
   }
   return $this->errorResponse([], 500, "Registration failed");
  }
-
+ 
 }
