@@ -1,0 +1,47 @@
+{
+    "name": "metft/feedreader",
+    "description": "this package help to read feed from servers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danial mohamadnejad",
+            "email": "danimohamadnejad@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "7.5.x-dev",
+        "aryanhasanzadeh/translator": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Metft\\FeedReader\\": "src/",
+            "Metft\\Database\\Seeders\\":"src/database/seeders/",
+            "Metft\\Database\\Factories\\":"src/database/factories/",
+            "Metft\\FeedReader\\Tests\\": "tests/"
+        },
+        "files":[
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4":{
+            "Metft\\FeedReader\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Metft\\FeedReader\\FeedReaderServiceProvider"
+            ],
+            "aliases":{
+                "FeedProcessorFacade":"Metft\\FeedReader\\Facades\\FeedProcessorFacade",
+                "FeedsReaderFacade":"Metft\\FeedReader\\Facades\\FeedsReaderFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "8.0.x-dev"
+    }
+}

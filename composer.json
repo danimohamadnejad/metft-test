@@ -6,10 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "aryanhasanzadeh/translator": "dev-main",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "metft/feedreader": "dev-CU-32bky7a_Feed-reader-package_danial-m"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -61,5 +63,8 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {"type":"path","url":"./packages/feedReader", "options":{"symlink":true}}
+    ]
 }
