@@ -212,4 +212,15 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'roles-information'=>[
+        'admin-role-name'=>'admin',
+        'roles-data'=>[
+            'admin'=>['name'=>'admin'],
+        ],
+    ],
+    'admin-information'=>[
+        'name'=>'danial mohamadnejad',
+        'email'=>'danimohamadnejad@gmail.com',
+        'password'=>'dani',
+    ],
 ];
