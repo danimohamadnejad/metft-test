@@ -8,7 +8,7 @@ class AuthServiceProvider extends ServiceProvider{
     $this->mergeConfigFrom(__DIR__.'/../../config/auth.php', 'metft-auth');
     $this->publishes([
       __DIR__.'/../../config/auth.php', config_path('metft-auth.php')
-    ], 'metft-auth');
+    ], 'metft.auth.config');
     $this->load_routes();
  }
  

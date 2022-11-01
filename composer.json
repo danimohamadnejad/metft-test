@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "metft/auth": "dev-CU-32pyh8f_Auth_danial-m",
+        "metft/feedreader": "dev-CU-32pyh8f_Auth_danial-m",
         "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {

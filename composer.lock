@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16324e06f709b4c8a026d93e262606cf",
+    "content-hash": "edfd8af66f1112b6fb02e3ff075b6dcd",
     "packages": [
         {
             "name": "aryanhasanzadeh/translator",
@@ -1719,6 +1719,63 @@
                 }
             ],
             "description": "registration and authentication",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "metft/feedreader",
+            "version": "dev-CU-32pyh8f_Auth_danial-m",
+            "dist": {
+                "type": "path",
+                "url": "./packages/feedReader",
+                "reference": "33da43b029c209381aa2088b7590bd2044b29002"
+            },
+            "require": {
+                "aryanhasanzadeh/translator": "dev-main"
+            },
+            "require-dev": {
+                "orchestra/testbench": "8.0.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Metft\\FeedReader\\FeedReaderServiceProvider"
+                    ],
+                    "aliases": {
+                        "FeedProcessorFacade": "Metft\\FeedReader\\Facades\\FeedProcessorFacade",
+                        "FeedsReaderFacade": "Metft\\FeedReader\\Facades\\FeedsReaderFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Metft\\FeedReader\\": "src/",
+                    "Metft\\Database\\Seeders\\": "src/database/seeders/",
+                    "Metft\\Database\\Factories\\": "src/database/factories/",
+                    "Metft\\FeedReader\\Tests\\": "tests/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Metft\\FeedReader\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danial mohamadnejad",
+                    "email": "danimohamadnejad@gmail.com"
+                }
+            ],
+            "description": "this package help to read feed from servers",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -8091,7 +8148,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "aryanhasanzadeh/translator": 20,
-        "metft/auth": 20
+        "metft/auth": 20,
+        "metft/feedreader": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
