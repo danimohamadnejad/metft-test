@@ -1336,12 +1336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fruitcake/php-cors.git",
-                "reference": "76d219410b710d9f5b4d52b1febffe57b4cf4f16"
+                "reference": "bb96f0246364ea36d4d22364a39023a7e2974fc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruitcake/php-cors/zipball/76d219410b710d9f5b4d52b1febffe57b4cf4f16",
-                "reference": "76d219410b710d9f5b4d52b1febffe57b4cf4f16",
+                "url": "https://api.github.com/repos/fruitcake/php-cors/zipball/bb96f0246364ea36d4d22364a39023a7e2974fc8",
+                "reference": "bb96f0246364ea36d4d22364a39023a7e2974fc8",
                 "shasum": ""
             },
             "require": {
@@ -1400,7 +1400,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-22T19:41:03+00:00"
+            "time": "2022-10-31T13:41:40+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1770,12 +1770,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "9a3ec4b41b2c97cecf5f8059fc46f7d12071fd19"
+                "reference": "61a7fd287b5023c6f32474772b9a27166bba5c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/9a3ec4b41b2c97cecf5f8059fc46f7d12071fd19",
-                "reference": "9a3ec4b41b2c97cecf5f8059fc46f7d12071fd19",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/61a7fd287b5023c6f32474772b9a27166bba5c51",
+                "reference": "61a7fd287b5023c6f32474772b9a27166bba5c51",
                 "shasum": ""
             },
             "require": {
@@ -1868,7 +1868,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-21T12:08:24+00:00"
+            "time": "2022-10-30T16:46:50+00:00"
         },
         {
             "name": "league/config",
@@ -2608,6 +2608,7 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
             },
+            "default-branch": true,
             "bin": [
                 "bin/php-parse"
             ],
@@ -6733,12 +6734,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "2a32ad93ad16ffcd673f67fdd26ad04876d40222"
+                "reference": "261d195b8d6f33bb78f97d91cabc46b95329c927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/2a32ad93ad16ffcd673f67fdd26ad04876d40222",
-                "reference": "2a32ad93ad16ffcd673f67fdd26ad04876d40222",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/261d195b8d6f33bb78f97d91cabc46b95329c927",
+                "reference": "261d195b8d6f33bb78f97d91cabc46b95329c927",
                 "shasum": ""
             },
             "require": {
@@ -6823,7 +6824,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-20T10:15:36+00:00"
+            "time": "2022-10-30T17:10:33+00:00"
         },
         {
             "name": "symfony/translation-contracts",

@@ -20,7 +20,7 @@ class AuthController extends ApiController{
   if($access_token){
     return $this->successResponse([
       'token'=>$access_token->plainTextToken,
-      'usage_guide'=>"Send token as authorization header -->> Authorization: Bearer {token}"
+      'How to use token?'=>"Send token as authorization header -->> Authorization: Bearer {token}"
     ], "User authenticated");
   }
   return $this->errorResponse([], 500, "Could not authenticate. Server error occurred.");
