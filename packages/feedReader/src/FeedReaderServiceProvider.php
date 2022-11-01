@@ -20,7 +20,7 @@ class FeedReaderServiceProvider extends ServiceProvider {
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', "feedReader");
         $this->mergeConfigFrom(__DIR__.'/config/feedReader.php', "feedReader");
         $this->publishes([
-            __DIR__.'/config/feedReader.php' => config_path('feedReader.php'),
+            __DIR__.'/config/feedReader.php' => config_path('metft-feedReader.php'),
         ], "metft.feedReader.config");
         $this->register_routes();
       /*   $this->publishes([

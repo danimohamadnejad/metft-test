@@ -42,5 +42,10 @@ return [
     'app'=>[
         'locale-key'=>"app_locale"
     ],
+    'permissions-information'=>[
+        'permissions-data'=>[
+            'news-read'=>['name'=>'news-read'],
+        ],
+    ],
 ];
 
