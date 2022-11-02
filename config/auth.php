@@ -13,7 +13,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'api',
+        'guard' => 'metft',
         'passwords' => 'users',
     ],
 
@@ -42,6 +42,10 @@ return [
         'api'=>[
             'driver'=>'sanctum',
             'provider'=>'users',
+        ],
+        'metft'=>[
+            'driver'=>'metft',
+            'provider'=>'users'
         ],
     ],
 
