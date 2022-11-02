@@ -1,5 +1,5 @@
 <?php
-namespace Metft\Auth\LoginMethods\LoginMethod;
+namespace Metft\Auth\LoginMethods;
 use Metft\Auth\LoginMethods\LoginMethod;
 
 class LoginWithIdPass extends LoginMethod{

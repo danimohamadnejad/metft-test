@@ -1,6 +1,6 @@
 <?php
-namespace Metft\Auth\LoginMethods\LoginMethod;
+namespace Metft\Auth\LoginMethods;
 
 abstract class LoginMethod{
-    
+
 }

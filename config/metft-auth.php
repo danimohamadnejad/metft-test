@@ -8,7 +8,6 @@ return [
             'provider'=>'users',
         ],
     ],
-    'default-login-method'=>'idpass',
     'login-methods'=>[
         'idpass'=>Metft\Auth\LoginMethods\LoginWithIdPass::class,
         'token'=>Metft\Auth\LoginMethods\LoginWithToken::class,

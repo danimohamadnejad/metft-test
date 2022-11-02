@@ -9,7 +9,8 @@
  Created Metft\Auth\Providers\AuthServiceProvider
  
 ## Requirements
- php artisan vendor:publish --tag=metft.auth.config to publish config file
-
+ For package to run correctly following command must be executed first:
+  php artisan vendor:publish --tag=metft.auth.config to publish config file
+ 
 ## Related tasks
  Auth (https://app.clickup.com/t/32pyh8f)
