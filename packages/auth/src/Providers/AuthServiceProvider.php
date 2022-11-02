@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider{
  }
  
  public function register(){
-    
+
  }
 
  private function load_routes(){

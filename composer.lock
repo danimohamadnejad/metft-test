@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edfd8af66f1112b6fb02e3ff075b6dcd",
+    "content-hash": "41083b41060587f2dde6d975f50961a4",
     "packages": [
         {
             "name": "aryanhasanzadeh/translator",
@@ -966,16 +966,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.37.0",
+            "version": "v9.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0c9675abf6d966e834b2ebeca3319f524e07a330"
+                "reference": "abf198e443e06696af3f356b44de67c0fa516107"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0c9675abf6d966e834b2ebeca3319f524e07a330",
-                "reference": "0c9675abf6d966e834b2ebeca3319f524e07a330",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/abf198e443e06696af3f356b44de67c0fa516107",
+                "reference": "abf198e443e06696af3f356b44de67c0fa516107",
                 "shasum": ""
             },
             "require": {
@@ -1148,7 +1148,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-10-25T15:43:46+00:00"
+            "time": "2022-11-01T14:05:55+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -1719,63 +1719,6 @@
                 }
             ],
             "description": "registration and authentication",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "metft/feedreader",
-            "version": "dev-CU-32pyh8f_Auth_danial-m",
-            "dist": {
-                "type": "path",
-                "url": "./packages/feedReader",
-                "reference": "33da43b029c209381aa2088b7590bd2044b29002"
-            },
-            "require": {
-                "aryanhasanzadeh/translator": "dev-main"
-            },
-            "require-dev": {
-                "orchestra/testbench": "8.0.x-dev"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Metft\\FeedReader\\FeedReaderServiceProvider"
-                    ],
-                    "aliases": {
-                        "FeedProcessorFacade": "Metft\\FeedReader\\Facades\\FeedProcessorFacade",
-                        "FeedsReaderFacade": "Metft\\FeedReader\\Facades\\FeedsReaderFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Metft\\FeedReader\\": "src/",
-                    "Metft\\Database\\Seeders\\": "src/database/seeders/",
-                    "Metft\\Database\\Factories\\": "src/database/factories/",
-                    "Metft\\FeedReader\\Tests\\": "tests/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Metft\\FeedReader\\Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Danial mohamadnejad",
-                    "email": "danimohamadnejad@gmail.com"
-                }
-            ],
-            "description": "this package help to read feed from servers",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -8148,8 +8091,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "aryanhasanzadeh/translator": 20,
-        "metft/auth": 20,
-        "metft/feedreader": 20
+        "metft/auth": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
