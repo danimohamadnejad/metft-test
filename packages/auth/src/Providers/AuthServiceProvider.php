@@ -28,7 +28,13 @@ class AuthServiceProvider extends ServiceProvider{
   $config = config("metft-auth");
   $this->app->bind(LoginMethod::class, function($app) use($config){
     $login_methods = $config['login-methods'];
-    
+    $request_login_method = request()->input($config['request-login-method-key']);
+    if(!empty($request_login_method) && array_key_exists($request_login_method, $config['login-methods'])){
+      return app()->make($config["login-methods"][$request_login_method]);
+    }
+    return app()->make(
+      $config['login-methods'][$config['default-login-method']]
+    );
   });
  }
  private function load_routes(){

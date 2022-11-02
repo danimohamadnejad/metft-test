@@ -13,6 +13,7 @@ class AuthGuard implements Guard{
  public function __construct(UserProvider $provider, LoginMethod $login_method){
     $this->provider = $provider;
     $this->login_method = $login_method;
+    dd($login_method);
  }
  public function check(){
     return !is_null($this->user);
