@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index(){
         /* email-password or authorization token */
+        return view('welcome');
         Auth::login();
         return "index";
     }

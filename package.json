@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build" 
     },
     "devDependencies": {
         "axios": "^1.1.2",
@@ -10,5 +10,10 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "firebase": "^9.13.0",
+        "firebaseui": "^6.0.1",
+        "vue": "^3.2.41"
     }
 }
