@@ -37,13 +37,11 @@ class ReadAndProcessServerFeedsJob implements ShouldQueue
     public function handle()
     {
         $reader = FeedsReaderFacade::set_server($this->news_server)->read();
-        if($reader->has_error()){
-         /* report error */
-         return false;
+        if($reader->has_loaded_feeds()){
+            $reader->traverse_loaded_feeds(function(array $feed){
+                CreateAndTranslateFeedJob::dispatch($feed);
+            });  
         }
-        $reader->traverse_loaded_feeds(function(array $feed){
-            CreateAndTranslateFeedJob::dispatch($feed);
-        });  
        
     }
     

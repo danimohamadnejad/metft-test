@@ -23,7 +23,7 @@ class NewsController extends ApiController{
     ReadAndProcessFeeds $read_and_process_feeds){
         if($news_server_repo->has_active_server()){
           $read_and_process_feeds->__invoke();
-          return $this->successResponse([], "We retrieving and processing news...");
+          return $this->successResponse([], "We are retrieving and processing news...");
         }
         return $this->errorResponse([], 202, "No active news server found.");
     }

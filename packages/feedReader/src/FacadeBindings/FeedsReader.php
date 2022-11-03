@@ -8,20 +8,10 @@ class FeedsReader{
   private ?NewsServer $server = null;
   private ?FeedsXmlParser $parser = null;
   private $feeds;
-  private $error = '';
 
   public function __construct(FeedsXmlParser $parser){
     $this->parser = $parser;
     $this->reset();
-  }
-  
-  private function set_error(string $error){
-    $this->error = $error;
-    return $this;
-  }
-
-  public function get_error(){
-    return $this->error;
   }
 
   public function traverse_loaded_feeds($closure){
@@ -39,17 +29,19 @@ class FeedsReader{
   }  
   private function reset(){
     $this->feeds = collect();
-    $this->set_error('');
     return $this;
   }
   public function read(){
     $this->reset();
     $this->parser->reset();
     $url = $this->server->feeds_url;
+    $response = null;
     try{
       $response = Http::get($url);
     }catch(\Throwable $th){
       /* could not resolve host */
+      feed_reader_log_error($th, "Could not read news from news server",
+       ['server_id'=>$this->server->getKey(), 'server_name'=>$this->server->name]);
       return $this; 
     }
     if($response && $response->successful()){
@@ -64,9 +56,7 @@ class FeedsReader{
   public function has_loaded_feeds(){
     return $this->feeds->count() > 0;
   }
-  public function has_error(){
-    return !empty($this->get_error());
-  }
+
   private function parse_and_store_feeds(string $xml_string){
    $this->parser->set_xml($xml_string)->append_to_feeds([
     "server_id"=>$this->server->getKey(),
