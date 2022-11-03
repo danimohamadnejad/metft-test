@@ -26,6 +26,8 @@ class NewsServerController extends ApiController{
       }
       return $this->errorResponse([], 500, 'Faild to update news server');
     }
+    
+    
     public function store(NewsServerSaveRequest $req){
      $res = $this->ns_repo->create_server($req->validated());  
      if(!is_null($res)){
@@ -34,6 +36,8 @@ class NewsServerController extends ApiController{
      }
      return $this->errorResponse([], 500, "Failed to create news server");
     }
+
+
     public function destroy(Request $req, NewsServer $news_server){
         if($this->ns_repo->delete_server($news_server)){
             return $this->successResponse([], "News server deleted successfuly");

@@ -50,7 +50,6 @@ class FeedsReader{
       $response = Http::get($url);
     }catch(\Throwable $th){
       /* could not resolve host */
-      $this->set_error($th->getMessage());
       return $this; 
     }
     if($response && $response->successful()){
