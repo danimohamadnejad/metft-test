@@ -70,6 +70,7 @@ class News extends Model
         $model->slug = Str::slug($model->title);
         $model->title_hash = hash("sha1", $model->title);
     }
+
     public function get_searchable_fields(){
         return ['title', 'body'];
     }

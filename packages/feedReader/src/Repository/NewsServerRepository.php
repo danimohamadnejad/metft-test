@@ -47,4 +47,7 @@ class NewsServerRepository {
     public function paginate(array $appendable_params = []){
       return $this->query->paginate($this->model->get_per_page())->appends($appendable_params);  
     }
+    public function has_active_server(){
+        return $this->model->active()->count() > 0;
+    }
 }

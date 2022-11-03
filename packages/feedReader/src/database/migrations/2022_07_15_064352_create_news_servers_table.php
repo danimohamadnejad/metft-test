@@ -20,7 +20,7 @@ class CreateNewsServersTable extends Migration
             $table->string("feeds_url");
             $table->text('details')->nullable();
             $table->string('logo')->default('');
-            $table->tinyInteger("status")->default(config('feedReader.feed-server-statuses.ACTIVE'));
+            $table->tinyInteger("status")->default(config('feedReader.feed-server-statuses.active.value'));
             $table->softDeletes();
             $table->timestamps();
         });

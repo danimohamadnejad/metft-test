@@ -4,8 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "ac2186acac12bcc4199ec8d41ef81211",
     "packages": [
+        {
+            "name": "aryanhasanzadeh/translator",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Aryanhasanzadeh/Translator.git",
+                "reference": "4f8662de7c937170d2ea02ca2e80b7c8f51794d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Aryanhasanzadeh/Translator/zipball/4f8662de7c937170d2ea02ca2e80b7c8f51794d4",
+                "reference": "4f8662de7c937170d2ea02ca2e80b7c8f51794d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "stichoza/google-translate-php": "^4.1"
+            },
+            "require-dev": {
+                "knuckleswtf/scribe": "^3.36",
+                "phpunit/phpunit": "10.0.x-dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Aryanhasanzadeh\\Translator\\Providers\\TranslatorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aryanhasanzadeh\\Translator\\": "src/",
+                    "Aryanhasanzadeh\\Translator\\Tests\\": "tests/",
+                    "Aryanhasanzadeh\\Translator\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aryan Hasanzadeh",
+                    "email": "aryanhasanzadeh75@gmail.com"
+                }
+            ],
+            "description": "This Package Help to Manage Translator Server and Translate data for Laravel Projects",
+            "homepage": "https://github.com/Aryanhasanzadeh/Translator",
+            "keywords": [
+                "api",
+                "google",
+                "laravel",
+                "laravel-package",
+                "php",
+                "translate",
+                "translate Manager",
+                "translator"
+            ],
+            "support": {
+                "issues": "https://github.com/Aryanhasanzadeh/Translator/issues",
+                "source": "https://github.com/Aryanhasanzadeh/Translator",
+                "wiki": "https://github.com/Aryanhasanzadeh/Translator/wiki"
+            },
+            "time": "2022-10-30T05:50:31+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -1612,6 +1679,63 @@
             "time": "2022-04-17T13:12:02+00:00"
         },
         {
+            "name": "metft/feedreader",
+            "version": "dev-CU-32bky7a_Feed-reader-package_danial-m",
+            "dist": {
+                "type": "path",
+                "url": "./packages/feedReader",
+                "reference": "33da43b029c209381aa2088b7590bd2044b29002"
+            },
+            "require": {
+                "aryanhasanzadeh/translator": "dev-main"
+            },
+            "require-dev": {
+                "orchestra/testbench": "8.0.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Metft\\FeedReader\\FeedReaderServiceProvider"
+                    ],
+                    "aliases": {
+                        "FeedProcessorFacade": "Metft\\FeedReader\\Facades\\FeedProcessorFacade",
+                        "FeedsReaderFacade": "Metft\\FeedReader\\Facades\\FeedsReaderFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Metft\\FeedReader\\": "src/",
+                    "Metft\\Database\\Seeders\\": "src/database/seeders/",
+                    "Metft\\Database\\Factories\\": "src/database/factories/",
+                    "Metft\\FeedReader\\Tests\\": "tests/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Metft\\FeedReader\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danial mohamadnejad",
+                    "email": "danimohamadnejad@gmail.com"
+                }
+            ],
+            "description": "this package help to read feed from servers",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.8.0",
             "source": {
@@ -2835,6 +2959,85 @@
                 }
             ],
             "time": "2022-09-16T03:22:46+00:00"
+        },
+        {
+            "name": "stichoza/google-translate-php",
+            "version": "v4.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stichoza/google-translate-php.git",
+                "reference": "ea96d2ca42af3e40890cd0ca043d1c3efb46f292"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/ea96d2ca42af3e40890cd0ca043d1c3efb46f292",
+                "reference": "ea96d2ca42af3e40890cd0ca043d1c3efb46f292",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "php": "^7.1|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stichoza\\GoogleTranslate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levan Velijanashvili",
+                    "email": "me@stichoza.com"
+                }
+            ],
+            "description": "Free Google Translate API PHP Package",
+            "homepage": "http://github.com/Stichoza/google-translate-php",
+            "keywords": [
+                "google",
+                "php",
+                "translate",
+                "translator"
+            ],
+            "support": {
+                "issues": "https://github.com/Stichoza/google-translate-php/issues",
+                "source": "https://github.com/Stichoza/google-translate-php/tree/v4.1.6"
+            },
+            "funding": [
+                {
+                    "url": "https://btc.com/bc1qc25j4x7yahghm8nnn6lypnw59nptylsw32nkfl",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/stichoza",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/stichoza",
+                    "type": "ko_fi"
+                },
+                {
+                    "url": "https://liberapay.com/stichoza",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://opencollective.com/stichoza",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/stichoza",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-25T16:55:34+00:00"
         },
         {
             "name": "symfony/console",
@@ -7816,7 +8019,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "aryanhasanzadeh/translator": 20,
+        "metft/feedreader": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
